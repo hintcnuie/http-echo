@@ -34,10 +34,28 @@ Use this command
 docker build <your_docker_id>/http-echo .
 ```
 
-# push to Docker Registry
+# Push to Docker Registry
 
 for example, push to Dockerhub
 
 ```
 docker push <your_docker_id>/http-echo
+```
+
+# Apply Deployment file to Kubernetes
+
+```
+kubectl apply -f deploy.yaml
+```
+
+# Apply Service file to Kubernetes
+
+```
+kubectl apploy -f service.yaml
+```
+
+# Get the service url using minikube service
+
+```
+minikube service echo-service --url
 ```
